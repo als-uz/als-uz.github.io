@@ -1,0 +1,2576 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.promo {
+  background: url("../img/cowbg.jpg") center center/cover no-repeat;
+  width: 100%;
+  height: 700px;
+}
+.promo__content {
+  padding: 230px 0 0 150px;
+}
+.promo__title {
+  color: #03463F;
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 64px;
+}
+.promo__subtitle {
+  color: #03463F;
+  font-size: 34px;
+  font-weight: 600;
+}
+.promo__hr {
+  width: 533px;
+  height: 3px;
+  margin: 10px 0 10px 0;
+  background-color: #03463F;
+}
+.promo__descr {
+  color: #03463F;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 30px;
+}
+.promo__descr_link {
+  color: #03463F;
+  font-size: 27px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 2px;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.promo__descr_link:hover {
+  color: #13645c;
+}
+.promo__descr-link {
+  color: #03463F;
+  font-size: 23px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+.promo__descr-link:hover {
+  color: #13645c;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  padding: 0;
+  background: none;
+  z-index: 3;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0 30px 0;
+}
+.header__logo_link, .header__logo_link-add {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 20px;
+  transition: 0.5s all;
+}
+.header__logo_link-a, .header__logo_link-a-add, .header__logo_link-add-a, .header__logo_link-add-a-add {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  text-decoration: none;
+  transition: 0.5s all;
+  color: #fff;
+}
+.header__logo_link-add {
+  color: #03463F;
+}
+.header__logo_link-add:hover {
+  color: #03463F;
+}
+.header__logo_link-a-add {
+  color: #03463F;
+}
+.header__logo_link-a-add:hover {
+  color: #03463F;
+}
+
+.logo_gw {
+  color: #03463F;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  margin-top: 10px;
+}
+.menu__item, .menu__item-add {
+  margin-right: 20px;
+  color: #03463F;
+  list-style-type: none;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+.menu__link, .menu__link-add {
+  text-decoration: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  transition: 0.5s all;
+}
+.menu__link:hover, .menu__link-add:hover {
+  color: #03463F;
+}
+.menu__link:after, .menu__link-add:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  border-radius: 2px;
+  background: #03463F;
+  transition: width 0.5s;
+}
+.menu__link:hover:after, .menu__link-add:hover:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #03463F;
+  transition: width 0.5s;
+}
+.menu__link-add {
+  color: #fff;
+}
+
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 63%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 24px;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #03463F;
+  border-radius: 2px;
+  margin-bottom: 4px;
+  transition: 0.5s all;
+}
+.hamburger_active span {
+  margin-bottom: -2px;
+}
+.hamburger_active span:nth-child(1) {
+  transform: translateY(3px) rotate(-45deg);
+}
+.hamburger_active span:nth-child(2) {
+  display: none;
+}
+.hamburger_active span:nth-child(3) {
+  transform: translateY(2px) rotate(45deg);
+}
+
+.header__logo-span {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.contactwithus__button {
+  width: 200px;
+  height: 50px;
+  background-color: #03463F;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.navbar {
+  position: fixed;
+}
+
+.header__btn {
+  cursor: pointer;
+  color: #03463F;
+  border: 1px solid #03463F;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-size: 15px;
+  background-color: transparent;
+  margin-left: 5px;
+}
+
+.about {
+  background-color: #03463F;
+  padding: 114px 0 100px 0;
+}
+.about__container {
+  width: 490px;
+  height: 285px;
+  border-radius: 10px;
+  margin-right: 50px;
+}
+.about__descr {
+  width: 700px;
+  text-align: start;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 2px;
+  margin-right: 50px;
+}
+.about__company_title {
+  display: none;
+}
+
+.als_logo {
+  width: 100%;
+  height: 105%;
+  border-radius: 10px;
+}
+
+.breeds__button {
+  background-color: #fff;
+  color: #03463F;
+  font-weight: 700;
+  height: 40px;
+}
+
+.btn-left {
+  margin-left: 20px;
+}
+
+.about-include {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cows {
+  padding: 120px 0 100px 80px;
+}
+.cows__title {
+  color: #03463F;
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 66px;
+  text-align: start;
+}
+.cows__card {
+  display: flex;
+  flex-direction: column;
+  max-height: 531px;
+  margin-bottom: 70px;
+  margin-right: 63px;
+  color: #FFF;
+  font-size: 22px;
+  font-weight: 600;
+}
+.cows__card img {
+  width: 360px;
+  max-height: 433px;
+  border: 1px solid #03463F;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  transition: 0.5s all;
+}
+.cows__button {
+  width: 360px;
+  height: 74px;
+  background-color: #fff;
+  border: 1px solid #03463F;
+  border-radius: 10px;
+  transition: 0.5s all;
+}
+.cows__button:hover {
+  background-color: #03463F;
+  color: #fff;
+}
+
+.cards4cows {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stub {
+  width: 360px;
+  height: 431px;
+}
+
+.cow__info {
+  position: absolute;
+  top: 150px;
+}
+.cow__descr {
+  max-width: 900px;
+  color: #03463F;
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.background-primary {
+  padding: 106px 0 156px 0;
+  position: relative;
+  top: 112.5px;
+  background-color: #f1f1f1;
+}
+
+.special_title {
+  color: #03463F;
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.add_primary {
+  padding: 106px 0 176px 0;
+}
+
+.cowcard {
+  padding: 180px 0 72px 0;
+  min-height: 500px;
+}
+.cowcard-img {
+  max-width: 570px;
+  min-height: 500px;
+  border: 2px solid rgba(3, 70, 63, 0.1);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-right-style: none;
+  border-bottom-style: none;
+}
+.cowcard__content {
+  padding: 36px 40px 52px 45px;
+  background-color: #03463F;
+  max-width: 768px;
+  width: 768px;
+  min-height: 500px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.cowcard__content_subtitle {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 10px;
+}
+.cowcard__content_title {
+  color: #fff;
+}
+.cowcard__list {
+  max-width: 667px;
+  max-height: 351px;
+}
+.cowcard__list-row {
+  position: relative;
+  padding: 13px 0 14px 16px;
+  width: 100%;
+  height: 54px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.cowcard__list-row:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.cowcard__list-row:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.cowcard__list-row span {
+  position: absolute;
+  color: #fff;
+  left: 220px;
+}
+
+.holstein_title {
+  font-size: 40px;
+  margin-bottom: 18px;
+}
+.holstein_list-col {
+  font-size: 15.5px;
+}
+
+.red-holstein_title {
+  font-weight: 600;
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.jersey_title {
+  font-size: 48px;
+  margin-bottom: 6px;
+}
+
+.danish_title {
+  font-size: 48px;
+  margin-bottom: 6px;
+}
+
+.cow-about__content {
+  padding: 37px 42px 43px 61px;
+  width: 100%;
+  min-height: 325px;
+  border: 3px solid #03463F;
+  border-radius: 10px;
+}
+.cow-about__subtitle {
+  color: #03463F;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.cow-about__title {
+  color: #03463F;
+  font-size: 42px;
+  font-weight: 600;
+}
+.cow-about__descr {
+  color: #03463F;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.meat-milk {
+  padding: 50px 0 100px 0;
+}
+.meat-milk__content {
+  padding: 31px 42px 56px 42px;
+  width: 100%;
+  height: 335px;
+  border: 3px solid #03463F;
+  border-radius: 10px;
+}
+.meat-milk__title {
+  padding: 0 0 20px 0;
+  color: #03463F;
+  font-size: 46px;
+  font-weight: 600;
+}
+.meat-milk__title:last-child {
+  margin-left: 103px;
+}
+.meat-milk__list {
+  min-width: 561px;
+  min-height: 156px;
+}
+
+.meat__list-item, .milk__list-item {
+  color: #03463F;
+  position: relative;
+  padding: 6px 0 0 26px;
+  min-width: 561px;
+  height: 39px;
+  border: 1px solid #03463F;
+}
+.meat__list-item:first-child, .milk__list-item:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.meat__list-item:last-child, .milk__list-item:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.meat__list-col, .milk__list-col {
+  position: absolute;
+  left: 50%;
+}
+
+.previous,
+.next,
+.home {
+  position: relative;
+  background-color: #03463F;
+  width: 77px;
+  height: 77px;
+  border-radius: 10px;
+  border: 2px solid #03463F;
+  transition: 0.5s all;
+}
+.previous:hover,
+.next:hover,
+.home:hover {
+  background-color: #fff;
+}
+
+.material-symbols-outlined {
+  position: absolute;
+  padding-top: 6px;
+  width: 78px;
+  height: 77px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 64px;
+  transition: 0.5s all;
+  cursor: pointer;
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
+}
+.material-symbols-outlined:first-child {
+  left: -5px;
+  top: -1.9px;
+}
+.material-symbols-outlined:nth-child(1) {
+  padding: 7px 0 0 10px;
+}
+.material-symbols-outlined:last-child {
+  right: -6px;
+}
+.material-symbols-outlined:hover {
+  color: #03463F;
+}
+
+.next-stub {
+  width: 77px;
+  height: 77px;
+  background-color: #fff;
+  border: none;
+}
+.next-stub:hover {
+  background-color: #fff;
+}
+
+.mini-nav {
+  padding: 0 0 70px 0;
+}
+
+.vaccines {
+  padding: 100px 0;
+}
+.vaccines__img img {
+  width: 578px;
+  height: 400px;
+  border-radius: 10px;
+}
+.vaccines_content {
+  margin-top: 100px;
+}
+.vaccines__info {
+  max-width: 672px;
+}
+.vaccines__title {
+  color: #03463F;
+  font-size: 42px;
+  font-weight: 900;
+}
+.vaccines__subtitle {
+  color: #03463F;
+  font-size: 40px;
+  font-weight: 600;
+}
+.vaccines__descr {
+  color: #03463F;
+  margin-top: 7px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.illness {
+  background-color: #fff;
+  padding: 30px 0;
+  margin-bottom: 50px;
+}
+.illness-main__descr, .illness-second__descr {
+  font-size: 24px;
+  color: #03463F;
+  font-weight: 300;
+  line-height: 30px;
+}
+.illness-second__descr {
+  width: 600px;
+}
+.illness-add__descr {
+  margin-top: 20px;
+}
+.illness__card {
+  margin: 30px 0 0 0;
+}
+.illness__img img {
+  width: 279px;
+  height: 348px;
+  border-radius: 20px;
+  margin-right: 50px;
+}
+
+.illness-add {
+  font-size: 24px;
+  color: #03463F;
+  font-weight: 300;
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+.positives {
+  background-color: #03463F;
+  padding: 100px 0;
+  margin-bottom: 1px;
+}
+.positives-box {
+  justify-content: space-between;
+}
+.positives__img img {
+  width: 370px;
+  height: 450px;
+  border-radius: 20px;
+  margin-left: 40px;
+}
+.positives__title {
+  text-align: right;
+  color: #fff;
+  font-size: 37px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.positives__descr {
+  text-align: right;
+  color: #fff;
+  font-size: 24.8px;
+  font-weight: 400;
+}
+
+.galery {
+  padding: 100px 0;
+}
+.galery__videos {
+  flex-direction: column;
+}
+.galery__title {
+  text-align: center;
+}
+
+.vid_img-vertical {
+  width: 410px;
+  height: 750px;
+}
+
+.vid_img-horizontal {
+  width: 750px;
+  height: 410px;
+}
+
+.stub_prev {
+  width: 340px;
+  height: 360px;
+}
+
+.vid-position-secthird {
+  margin-left: 30px;
+}
+
+.vid-position-fourth {
+  width: 710px;
+  height: 360px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.vid-position-fifth {
+  width: 710px;
+  height: 360px;
+  margin-right: 30px;
+}
+
+.vid-position-sixseventh {
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
+.second__col,
+.third__col {
+  margin-top: 30px;
+}
+
+.video_block {
+  position: relative;
+}
+
+.preview_btn {
+  width: 80px;
+  height: 80px;
+  background-color: #03463F;
+  border-radius: 100%;
+  opacity: 0.4;
+  transition: 0.5s all;
+}
+.preview_btn:hover {
+  opacity: 0.8;
+}
+
+.vid-position-altone {
+  width: 710px;
+  height: 360px;
+  margin: 0 30px 30px 0;
+}
+
+.vid-position-altfive {
+  margin-right: 30px;
+}
+
+.vid-position-altsix {
+  width: 710px;
+  height: 360px;
+  margin: 0 30px 30px 0;
+}
+
+.vid-position-altseveneight {
+  margin-right: 30px;
+}
+
+.a1_position,
+.a4_position,
+.a5_position,
+.a8_position,
+.a9_position {
+  position: absolute;
+  top: 0;
+  margin: 335px 165px 335px 165px;
+}
+
+.a2_position,
+.a3_position,
+.a6_position,
+.a7_position,
+.a10_position {
+  position: absolute;
+  top: 0;
+  margin: 170px 315px 140px 345px;
+}
+
+.a3_position, .a7_position, .a10_position {
+  margin-top: 140px;
+  margin-left: 315px;
+}
+
+.continue {
+  overflow: hidden;
+}
+
+.continue {
+  display: none;
+}
+.continue-block {
+  display: block;
+}
+
+.close-continue {
+  padding: 30px 0;
+  font-size: 24px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  color: #03463F;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close-continue:hover {
+  color: #03463F;
+}
+
+.play {
+  border-radius: 100px;
+  position: relative;
+  color: #fff;
+}
+
+.play:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  left: 366px;
+  bottom: 133px;
+  border: 20px solid transparent;
+  border-top: 35px solid white;
+  rotate: 30deg;
+}
+
+.play:first-child::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  bottom: -80px;
+  border: 20px solid transparent;
+  border-top: 35px solid white;
+  rotate: 30deg;
+}
+
+.addition {
+  padding: 30px 0;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+}
+.addition-none {
+  display: none;
+}
+
+.down-img {
+  max-width: 24px;
+  max-height: 24px;
+  margin-top: 9px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.continue-button {
+  font-size: 24px;
+  font-weight: 300;
+  color: #03463F;
+  cursor: pointer;
+}
+
+.mt-30 {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.ml-30 {
+  margin-left: 30px;
+}
+
+.fourth__col {
+  margin-top: 30px;
+}
+
+.reverse {
+  rotate: 200grad;
+}
+
+.first_photo {
+  width: 100%;
+  height: 85%;
+}
+
+.second_photo, .ninth_photo {
+  width: 100%;
+  height: 80%;
+}
+
+.third_photo, .fifth_photo, .sixth_photo, .tenth_photo {
+  width: 100%;
+  height: 100%;
+}
+
+.sixth_photo {
+  width: 98%;
+}
+
+.fifth_photo {
+  width: 90%;
+}
+
+.fourth_photo, .eighth_photo {
+  width: 90%;
+  height: 100%;
+  margin-left: 60px;
+}
+
+.eighth_photo {
+  width: 85%;
+  margin-left: 75px;
+}
+
+.seventh_photo {
+  width: 90%;
+  height: 100%;
+}
+
+.ninth_photo {
+  height: 70%;
+}
+
+.partners {
+  padding: 100px 0 100px 0;
+  background-color: #03463F;
+}
+.partners__title {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.first-main-partner img, .second-main-partner img, .third-main-partner img {
+  width: 250px;
+}
+
+.main-partners {
+  gap: 30px;
+}
+
+.textformatpartners {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 1000px;
+  margin-top: 50px;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.client {
+  padding: 100px 0 100px 0;
+}
+.client-box {
+  padding: 20px 0;
+  background-color: #03463F;
+  width: 700px;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.client-list, .client .vaccines-client-list {
+  list-style-type: none;
+}
+.client-item {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 52px;
+}
+
+.vaccines-client-item {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 52px;
+  text-align: end;
+}
+
+.second-partner__title {
+  color: #03463F;
+}
+
+.main-client__title {
+  color: #03463F;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.vaccines-client__title {
+  color: #03463F;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: end;
+  margin-top: 50px;
+}
+
+.vaccines-client-box {
+  border-radius: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 20px 30px 0 20px;
+  justify-content: end;
+}
+
+.vaccines-client-endbox {
+  display: flex;
+  justify-content: end;
+}
+
+.video-body {
+  background-color: #03463F;
+}
+
+.vertical_video-box {
+  position: relative;
+  padding-top: 39px;
+  padding-bottom: 35px;
+}
+
+.horizontal_video-box {
+  position: relative;
+}
+
+.horizontal_video {
+  display: block;
+  align-items: center;
+  margin: 0 auto;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin-top: 200px;
+}
+.horizontal_video-box {
+  display: flex;
+}
+
+.vertical_video {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+.vertical_video-box {
+  display: flex;
+}
+
+.back-icon {
+  margin-bottom: 5px;
+}
+
+.back-button {
+  height: 100%;
+  padding: 5px 5px 7px 5px;
+  top: 40px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+.back-button-vertical {
+  top: 1px;
+  left: 20px;
+}
+.back-button-horizontal {
+  margin-top: 200px;
+}
+.back-button a {
+  font-size: 25px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  align-items: center;
+}
+
+.forms {
+  padding: 121px 0 100px 0;
+}
+
+.form-area {
+  display: flex;
+  justify-content: space-between;
+}
+.form__title {
+  margin-bottom: 20px;
+  text-align: start;
+}
+.form-promo {
+  width: 521px;
+  height: 396px;
+  background-color: #03463F;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.form-promo-icon {
+  margin-top: 30px;
+}
+.form-promo-content {
+  font-size: 28px;
+  padding: 10px;
+  color: #fff;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-weight: 700;
+  text-align: start;
+}
+.form-input {
+  color: #676767;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding: 14px 18px 16px 18px;
+  font-size: 26px;
+  width: 742px;
+  height: 84px;
+  border-radius: 20px;
+  border: none;
+  background-color: #d9d9d9;
+  transition: 1s all;
+}
+.form-input:hover {
+  border: 1px solid #03463F;
+}
+
+.button_submit {
+  justify-items: end;
+  color: #676767;
+  font-size: 26px;
+  font-weight: 600;
+  width: 351px;
+  height: 84px;
+  border: none;
+  border-radius: 20px;
+  background-color: #d9d9d9;
+  transition: 0.5s all;
+}
+.button_submit:hover {
+  background-color: #03463F;
+  color: #fff;
+}
+
+.input-title {
+  margin-left: 10px;
+  color: #03463F;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.footer {
+  padding: 50px 0 70px 0;
+  background-color: #03463F;
+  color: #fff;
+}
+
+.mini-container {
+  margin: 0 45px;
+}
+
+.information {
+  gap: 100px;
+}
+
+.upper-floor {
+  display: flex;
+  justify-content: space-between;
+}
+.upper-floor_title {
+  display: flex;
+  flex-direction: column;
+}
+.upper-floor_descr {
+  font-size: 20px;
+  max-width: 672px;
+  width: 100%;
+  margin: 10px 0 20px 0;
+}
+
+.main-title {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.main_mini-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.main-a, .main-phone_link {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+.main-a:hover, .main-phone_link:hover {
+  color: rgb(206, 206, 206);
+}
+
+.phone-title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.main-phone {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.upper-floor_phone {
+  margin-left: 36px;
+}
+
+.column {
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 1399px) {
+  .vertical_video-box video {
+    width: 420px;
+    height: 743px;
+  }
+  .holstein_title {
+    font-size: 28px;
+  }
+  .red-holstein_title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .holstein_subtitle,
+  .red-holstein_subtitle {
+    font-size: 16px;
+  }
+  .danish_title {
+    font-size: 44px;
+  }
+  .bueffel_title {
+    font-size: 39px;
+  }
+  .meat-milk__title {
+    font-size: 36px;
+  }
+  .meat__list-item,
+  .milk__list-item {
+    min-width: 497px;
+  }
+  .upper-floor_descr {
+    max-width: 500px;
+  }
+  .main-title {
+    font-size: 38px;
+  }
+  .information {
+    gap: 24px;
+  }
+  .upper-floor_descr {
+    font-size: 18px;
+  }
+  .upper-floor_phone {
+    margin-left: 55px;
+  }
+  .form__title {
+    font-size: 48px;
+  }
+  .form-promo {
+    width: 460px;
+  }
+  .form-promo-content {
+    font-size: 27px;
+  }
+  .form-input {
+    width: 626px;
+  }
+  .partners__title {
+    font-size: 44px;
+  }
+  .first-main-partner img,
+  .second-main-partner img,
+  .third-main-partner img {
+    width: 257px;
+  }
+  .vaccines__title {
+    font-size: 40px;
+  }
+  .vaccines__subtitle {
+    font-size: 36px;
+  }
+  .vaccines__descr {
+    font-size: 18px;
+  }
+  .vaccines_img img {
+    width: 500px;
+  }
+  .vaccines_content {
+    gap: 50px;
+  }
+  .cows__card {
+    width: 300px;
+  }
+  .cows__card img {
+    width: 330px;
+  }
+  .cows__button {
+    width: 330px;
+  }
+  .main-cows__title {
+    margin-right: 25px;
+  }
+  .stub {
+    width: 360px;
+  }
+  #scroll {
+    max-width: 100%;
+  }
+  .positives__title {
+    font-size: 31px;
+    margin-bottom: 25px;
+  }
+  .positives__descr {
+    font-size: 20.8px;
+  }
+  .positives__img img {
+    width: 323px;
+    height: 398px;
+    margin-left: 40px;
+  }
+}
+@media (max-width: 1199px) {
+  .vertical_video-box video {
+    width: 397px;
+    height: 703px;
+  }
+  .textformatpartners {
+    font-size: 21px;
+    max-width: 941px;
+    margin-top: 40px;
+  }
+  .cowcard__content {
+    min-height: 388px;
+    height: 388px;
+  }
+  .cowcard__content_subtitle {
+    font-size: 16px;
+  }
+  .cowcard__content_title {
+    font-size: 37px;
+  }
+  .red-holstein_title {
+    font-size: 23px;
+  }
+  .red-holstein_subtitle {
+    font-size: 14px;
+  }
+  .holstein_title {
+    font-size: 28px;
+  }
+  .meat-milk__title {
+    font-size: 32px;
+  }
+  .milk__list-item {
+    min-width: 367px;
+    font-size: 15px;
+    padding-left: 9px;
+  }
+  .meat__list-item {
+    min-width: 393px;
+    font-size: 15px;
+    padding-left: 9px;
+  }
+  .meat-milk__content {
+    height: 310px;
+    padding-bottom: 0px;
+  }
+  .cow-about__title {
+    font-size: 40px;
+  }
+  .cow-about__descr {
+    font-size: 20px;
+  }
+  .cowcard-img {
+    max-width: 400px;
+    min-height: 388px;
+  }
+  .cowcard__list-row {
+    font-size: 12px;
+    height: 38px;
+    padding-top: 8px;
+  }
+  .special_title {
+    font-size: 45px;
+  }
+  .cow__descr {
+    font-size: 24px;
+  }
+  .upper-floor_descr {
+    max-width: 360px;
+  }
+  .main-title {
+    font-size: 35px;
+  }
+  .upper-floor_descr {
+    font-size: 16px;
+  }
+  .main_mini-title {
+    font-size: 27px;
+  }
+  .phone-title {
+    font-size: 20px;
+  }
+  .main-phone {
+    font-size: 26px;
+  }
+  .form__title {
+    font-size: 42px;
+  }
+  .form-promo {
+    width: 370px;
+  }
+  .form-promo-content {
+    font-size: 24px;
+  }
+  .form-input {
+    width: 543px;
+  }
+  .partners__title {
+    font-size: 40px;
+  }
+  .first-main-partner img,
+  .second-main-partner img,
+  .third-main-partner img {
+    width: 227px;
+  }
+  .preview_btn,
+  .preview_btn.a1-position {
+    display: none;
+  }
+  .vid_img-vertical {
+    width: 310px;
+    height: 650px;
+  }
+  .vid_img-horizontal {
+    width: 610px;
+    height: 330px;
+  }
+  .stub_prev {
+    width: 290px;
+    height: 290px;
+  }
+  .vaccines__img img {
+    width: 490px;
+    height: 333px;
+  }
+  .cows__card {
+    max-width: 500px;
+    width: 380px;
+  }
+  .cows__card img {
+    width: 380px;
+  }
+  .cows__button {
+    width: 380px;
+  }
+  nav {
+    padding: 0;
+  }
+  .menu__link {
+    font-size: 15px;
+  }
+  .promo__content {
+    padding: 220px 0 0 50px;
+  }
+  .promo__title {
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 58px;
+  }
+  .promo__subtitle {
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .promo__hr {
+    width: 473px;
+  }
+  .promo__descr {
+    line-height: 24px;
+  }
+  .promo__descr-link {
+    font-size: 19px;
+  }
+  .promo__descr_link {
+    font-size: 24px;
+  }
+  .about__container {
+    height: 215px;
+  }
+  .about__descr {
+    font-size: 14px;
+  }
+  .holstein_title {
+    font-size: 29px;
+  }
+  .holstein_list-col {
+    font-size: 12px;
+  }
+  .main-client__title,
+  .vaccines-client__title {
+    font-size: 38px;
+  }
+  .client-item,
+  .vaccines-client-item {
+    font-size: 36px;
+    line-height: 46px;
+  }
+  .horizontal_video {
+    width: 710px;
+    height: 401px;
+  }
+  .main-phone {
+    font-size: 20px;
+  }
+  .positives__title {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  .positives__descr {
+    font-size: 19.8px;
+  }
+  .positives__img img {
+    width: 283px;
+    height: 355px;
+    margin-left: 20px;
+  }
+  .vaccines__title {
+    font-size: 32px;
+  }
+  .vaccines__subtitle {
+    font-size: 27px;
+  }
+  .about__descr {
+    width: 493px;
+  }
+}
+@media (max-width: 991px) {
+  .form-area {
+    gap: 20px;
+  }
+  .textformatpartners {
+    font-size: 19px;
+    max-width: 720px;
+  }
+  .cowcard__content_title {
+    font-size: 34px;
+  }
+  .holstein_subtitle {
+    font-size: 11px;
+  }
+  .holstein_title {
+    font-size: 20px;
+  }
+  .red-holstein_title {
+    font-size: 18px;
+  }
+  .holstein_list-col {
+    font-size: 9px;
+  }
+  .home,
+  .next,
+  .previous {
+    width: 65px;
+    height: 66px;
+  }
+  .material-symbols-outlined {
+    width: 65px;
+    height: 66px;
+    font-size: 52px;
+  }
+  .meat-milk__title {
+    font-size: 26px;
+  }
+  .milk__list-item,
+  .meat__list-item {
+    min-width: 353px;
+    font-size: 13px;
+  }
+  .meat-milk__content {
+    padding: 20px 20px 56px 10px;
+    height: 270px;
+  }
+  .mm_lists {
+    gap: 10px;
+  }
+  .cow-about__title {
+    font-size: 38px;
+  }
+  .cow-about__descr {
+    font-size: 18px;
+  }
+  .cowcard-img {
+    max-width: 320px;
+    min-height: 312px;
+  }
+  .cowcard__content_subtitle {
+    font-size: 13px;
+  }
+  .cowcard__list-row {
+    font-size: 10px;
+    padding-top: 6px;
+    height: 29px;
+  }
+  .cowcard__list-row span {
+    left: 151px;
+  }
+  .main-title {
+    font-size: 23px;
+  }
+  .cowcard__content {
+    min-height: 312px;
+    height: 312px;
+  }
+  .information {
+    gap: 24px;
+  }
+  .upper-floor_descr {
+    font-size: 13px;
+    max-width: 224px;
+  }
+  .upper-floor_phone {
+    margin-left: 30px;
+  }
+  .main_mini-title {
+    font-size: 21px;
+  }
+  .phone-title {
+    font-size: 16px;
+  }
+  .main-phone {
+    font-size: 18px;
+  }
+  .privacy {
+    font-size: 13px;
+  }
+  .galery__title {
+    padding-left: 5px;
+  }
+  .main-cows__title {
+    padding-left: 80px;
+  }
+  .form__title {
+    font-size: 38px;
+    margin-left: 10px;
+  }
+  .form-promo {
+    width: 309px;
+    height: 295px;
+    margin-left: 10px;
+  }
+  .form-promo-content {
+    font-size: 17px;
+  }
+  .form-promo-icon img {
+    height: 91px;
+  }
+  .form-input {
+    width: 427px;
+    height: 64px;
+    margin-bottom: 13px;
+    margin-right: 10px;
+  }
+  .button_submit {
+    width: 190px;
+    height: 64px;
+  }
+  .partners__title {
+    font-size: 34px;
+  }
+  .first-main-partner img,
+  .second-main-partner img,
+  .third-main-partner img {
+    width: 197px;
+  }
+  .vid_img-vertical {
+    width: 270px;
+    height: 540px;
+  }
+  .vid_img-horizontal {
+    width: 470px;
+    height: 260px;
+  }
+  .stub_prev {
+    width: 230px;
+    height: 270px;
+  }
+  .vid-position-secthird {
+    margin-left: 10px;
+  }
+  .vid-position-fourth {
+    margin: 10px 0 0 10px;
+  }
+  .vid-position-fifth {
+    margin-right: 10px;
+  }
+  .vid-position-sixseventh {
+    margin: 10px 10px 0 0;
+  }
+  .addition {
+    display: none;
+  }
+  .first__col {
+    margin-bottom: 10px;
+  }
+  .preview_btn {
+    display: none;
+  }
+  .vaccines__img img {
+    width: 339px;
+    height: 232px;
+  }
+  .vaccines__title {
+    font-size: 27px;
+  }
+  .vaccines__subtitle {
+    font-size: 25px;
+  }
+  .vaccines__descr {
+    font-size: 15px;
+  }
+  .cows__card {
+    width: 218px;
+  }
+  .cows__card img {
+    width: 240px;
+  }
+  .cows__button {
+    width: 240px;
+  }
+  .stub {
+    width: 240px;
+  }
+  nav {
+    padding: 0;
+  }
+  .about__descr {
+    font-size: 13px;
+    margin-right: 0;
+  }
+  .about__container {
+    height: 241px;
+    margin: 0 30px 0 0;
+  }
+  .container {
+    max-width: 960px;
+  }
+  .header__logo_link {
+    font-size: 16px;
+  }
+  .header__logo_link:hover {
+    color: #03463F;
+  }
+  .header__logo-span {
+    font-size: 7px;
+  }
+  .menu__link {
+    font-size: 11px;
+  }
+  .menu__link:after {
+    height: 0;
+  }
+  .menu__link:hover:after {
+    height: 0;
+  }
+  .promo__content {
+    padding: 200px 0 -20px 30px;
+  }
+  .promo__title {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 58px;
+  }
+  .promo__subtitle {
+    font-size: 26px;
+    font-weight: 500;
+  }
+  .promo__hr {
+    width: 424px;
+  }
+  .promo__descr {
+    line-height: 22px;
+  }
+  .promo__descr-link {
+    font-size: 18px;
+  }
+  .promo__descr-link:hover {
+    color: #03463F;
+  }
+  .promo__descr_link {
+    font-size: 22px;
+  }
+  .promo__descr_link:hover {
+    color: #03463F;
+  }
+  .client-box {
+    width: 600px;
+  }
+  .horizontal_video {
+    width: 570px;
+    height: 323px;
+  }
+  .main-phone {
+    font-size: 16px;
+  }
+  .illness-main__descr, .illness-add {
+    font-size: 19px;
+    font-weight: 400;
+  }
+  .illness-add, .illness-second__descr {
+    width: 100%;
+  }
+  .vaccines__descr {
+    line-height: 20px;
+  }
+  .positives__title {
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+  .positives__descr {
+    font-size: 14.8px;
+  }
+  .positives__img img {
+    width: 215px;
+    height: 276px;
+    margin-left: 13px;
+  }
+  .positives {
+    padding: 70px 0;
+  }
+  .about__container {
+    display: none;
+  }
+  .about__descr {
+    margin: 0;
+  }
+  .about-include {
+    margin-left: 100px;
+  }
+}
+@media (max-width: 948px) {
+  .als_logo {
+    width: 100%;
+  }
+  .cards4cows {
+    justify-content: center;
+  }
+  .cows {
+    padding-left: 50px;
+  }
+  .cows__card {
+    width: 270px;
+  }
+  .cows__card img {
+    width: 320px;
+  }
+  .cows__button {
+    width: 320px;
+  }
+}
+@media (max-width: 767px) {
+  .textformatpartners {
+    max-width: 544px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    margin-top: 23px;
+  }
+  .special_title {
+    font-size: 35px;
+  }
+  .holstein_title {
+    font-size: 19px;
+  }
+  .home,
+  .next,
+  .previous {
+    width: 57px;
+    height: 58px;
+  }
+  .material-symbols-outlined {
+    font-size: 46px;
+    width: 57px;
+    height: 58px;
+  }
+  .material-symbols-outlined:nth-child(1) {
+    padding: 5px 0 0 9px;
+  }
+  .mm_lists {
+    flex-direction: column;
+  }
+  .meat-milk__content {
+    height: 480px;
+  }
+  .meat-milk__title {
+    padding-bottom: 12px;
+  }
+  .cow-about__title {
+    font-size: 34px;
+  }
+  .cow-about__descr {
+    font-size: 16px;
+  }
+  .column-flex {
+    flex-direction: column;
+  }
+  .cowcard__img {
+    align-self: center;
+  }
+  .cowcard__list-row span {
+    left: 145px;
+  }
+  .cowcard-img {
+    text-align: center;
+    max-width: 397px;
+    max-height: 338px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 20px;
+  }
+  .cowcard__content {
+    align-self: center;
+    max-width: 397px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0px;
+  }
+  .cow__descr {
+    font-size: 20px;
+  }
+  .background-primary {
+    padding-top: 50px;
+  }
+  .upper-floor {
+    flex-direction: column;
+  }
+  .upper-floor_descr {
+    max-width: 672px;
+  }
+  .phone-title {
+    font-size: 20px;
+  }
+  .main-phone {
+    font-size: 20px;
+  }
+  .form__title {
+    font-size: 32px;
+  }
+  .form-promo {
+    width: 196px;
+    height: 265px;
+  }
+  .form-promo-content {
+    font-size: 13px;
+    margin-left: 0px;
+  }
+  .form-promo-icon img {
+    height: 68px;
+  }
+  .form-input {
+    width: 346px;
+    height: 56px;
+    font-size: 17px;
+  }
+  .button_submit {
+    width: 190px;
+    height: 60px;
+    font-size: 17px;
+  }
+  .partners {
+    padding: 50px 0 75px 0;
+  }
+  .main-partners {
+    gap: 15px;
+  }
+  .partners__title {
+    font-size: 28px;
+  }
+  .first-main-partner img,
+  .second-main-partner img,
+  .third-main-partner img {
+    width: 167px;
+  }
+  .header {
+    margin-left: 20px;
+  }
+  .vid_img-vertical {
+    width: 190px;
+    height: 400px;
+  }
+  .vid_img-horizontal {
+    width: 370px;
+    height: 200px;
+  }
+  .stub_prev {
+    width: 180px;
+    height: 190px;
+  }
+  .first__col {
+    margin-bottom: 0;
+  }
+  .second__col {
+    margin-top: 10px;
+  }
+  .third__col {
+    margin-top: 10px;
+  }
+  .stub {
+    width: 0;
+    height: 0;
+  }
+  .vaccines_content {
+    flex-direction: column;
+  }
+  .vaccines__img {
+    text-align: center;
+  }
+  .vaccines__img img {
+    width: 355px;
+    height: 242px;
+  }
+  .vaccines__info {
+    width: 350px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .vaccines__title {
+    font-size: 27px;
+  }
+  .vaccines__subtitle {
+    font-size: 25px;
+  }
+  .vaccines_decr {
+    font-size: 15px;
+  }
+  .cards4cows {
+    flex-direction: column;
+    width: 360px;
+    margin: 0 auto;
+  }
+  .container {
+    max-width: 720px;
+  }
+  .promo__title {
+    font-size: 33px;
+  }
+  .promo__subtitle {
+    font-size: 21px;
+  }
+  .promo__hr {
+    width: 331px;
+  }
+  .promo__descr {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .promo__descr_link {
+    font-size: 20px;
+  }
+  .hamburger {
+    display: block;
+  }
+  nav {
+    padding: 0 0 20px 0;
+  }
+  .menu {
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: -50px;
+    left: -100%;
+    width: 70%;
+    height: calc(100vh + 50px);
+    padding: 20px 15px;
+    background-color: rgba(3, 70, 63, 0.8);
+    transition: 0.6s all;
+  }
+  .menu__item {
+    margin: 10px 0 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+  .menu__link {
+    font-size: 25px;
+    color: #fff;
+  }
+  .menu_active {
+    left: 0;
+  }
+  .about {
+    padding: 70px 0;
+  }
+  .about__container {
+    display: none;
+  }
+  .about__descr {
+    font-size: 13px;
+    max-width: 500px;
+  }
+  .about__company_title {
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  .container-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .milk-only {
+    height: 260px;
+  }
+  .main-client__title,
+  .vaccines-client__title {
+    font-size: 34px;
+  }
+  .client-item,
+  .vaccines-client-item {
+    font-size: 27px;
+    line-height: 32px;
+  }
+  .client-box {
+    width: 500px;
+  }
+  .horizontal_video-box {
+    flex-direction: column;
+  }
+  .back-button-horizontal {
+    width: 140px;
+  }
+  .horizontal_video {
+    width: 550px;
+    height: 311px;
+    margin-top: 50px;
+  }
+  .vaccines__descr {
+    line-height: 23px;
+  }
+  .illness-main__descr,
+  .illness-add {
+    font-size: 17px;
+    line-height: 26px;
+    line-height: 23px;
+  }
+  .illness-add, .illness-second__descr {
+    font-size: 16px;
+  }
+  .illness-add {
+    margin-top: 7px;
+  }
+  .illness__img img {
+    width: 230px;
+    height: 283px;
+    margin-right: 17px;
+  }
+  .illness-second__descr {
+    font-size: 16px;
+    margin-top: 0;
+  }
+  .illness-add__descr {
+    margin-top: 0;
+  }
+  .about-include {
+    margin-left: 30px;
+  }
+  .positives__title {
+    font-size: 15px;
+  }
+  .positives__descr {
+    font-size: 11.8px;
+  }
+  .positives__img img {
+    width: 186px;
+    height: 222px;
+  }
+}
+@media (max-width: 575px) {
+  .back-button {
+    width: 140px;
+    margin-bottom: 20px;
+  }
+  .vertical_video-box,
+  .horizontal_video-box {
+    display: block;
+  }
+  .vertical_video-box video,
+  .horizontal_video-box video {
+    width: 335px;
+  }
+  .meat__list-col,
+  .milk__list-col {
+    left: 55%;
+  }
+  .textformatpartners {
+    max-width: 310px;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 15px;
+  }
+  .special_title {
+    font-size: 33px;
+  }
+  .holstein_ttitle,
+  .bueffel_ttitle {
+    font-size: 26px;
+  }
+  .holstein_title {
+    font-size: 15px;
+  }
+  .holstein_subtitle {
+    font-size: 10px;
+  }
+  .home,
+  .next,
+  .previous {
+    width: 48px;
+    height: 50px;
+  }
+  .material-symbols-outlined {
+    font-size: 36px;
+    width: 48px;
+    height: 50px;
+  }
+  .meat-milk__content {
+    height: 395px;
+  }
+  .meat-milk__title {
+    font-size: 23px;
+  }
+  .meat__list-item,
+  .milk__list-item {
+    min-width: 304px;
+    font-size: 11px;
+    height: 30px;
+  }
+  .cow-about__title {
+    font-size: 22px;
+  }
+  .cow-about__descr {
+    font-size: 15px;
+  }
+  .cow-about__content {
+    padding: 18px 37px 33px 18px;
+  }
+  .cow-about__subtitle {
+    font-size: 15px;
+  }
+  .cowcard {
+    padding-bottom: 50px;
+  }
+  .cowcard-img {
+    max-width: 348px;
+  }
+  .cowcard__content {
+    max-width: 347px;
+    width: 347px;
+  }
+  .cowcard__list-row {
+    font-size: 9px;
+  }
+  .cowcard__list-row span {
+    left: 100px;
+  }
+  .cow__descr {
+    font-size: 17px;
+  }
+  .form__title {
+    font-size: 30px;
+  }
+  .form-area {
+    display: block;
+  }
+  .form-promo {
+    width: 326px;
+    height: 128px;
+  }
+  .form-promo-icon {
+    display: none;
+  }
+  .form-input {
+    margin-left: 10px;
+    width: 325px;
+    height: 56px;
+  }
+  .form-input:first-child {
+    margin-top: 10px;
+  }
+  .button_submit {
+    margin-left: 10px;
+  }
+  .main_li-descr,
+  .main-a {
+    font-size: 13px;
+  }
+  .main_mini-title {
+    font-size: 18px;
+  }
+  .main-partners {
+    gap: 10px;
+  }
+  .partners__title {
+    font-size: 20px;
+  }
+  .first-main-partner img,
+  .second-main-partner img,
+  .third-main-partner img {
+    width: 107px;
+  }
+  .container {
+    max-width: 540px;
+  }
+  .promo__content {
+    padding-left: 30px;
+  }
+  .promo__title {
+    font-size: 30px;
+    margin: 0;
+    line-height: 45px;
+  }
+  .promo__subtitle {
+    font-size: 17px;
+  }
+  .promo__hr {
+    width: 260px;
+  }
+  .promo__descr {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .promo__descr_link {
+    font-size: 20px;
+  }
+  .about {
+    padding: 70px 0;
+  }
+  .about__descr {
+    font-size: 13px;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .about__company_title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-left: 41px;
+  }
+  .vid_img-vertical {
+    width: 120px;
+    height: 230px;
+  }
+  .vid_img-horizontal {
+    width: 210px;
+    height: 120px;
+  }
+  .stub_prev {
+    width: 100px;
+    height: 100px;
+  }
+  .galery {
+    padding-top: 50px;
+  }
+  .main-cows__title {
+    font-size: 43px;
+  }
+  .cows {
+    padding-left: 25px;
+  }
+  .cards4cows {
+    width: 303px;
+  }
+  .cows__card img {
+    width: 280px;
+  }
+  .cows__button {
+    width: 280px;
+  }
+  .vaccines__img img {
+    width: 329px;
+    height: 207px;
+  }
+  .vaccines__title,
+  .vaccines__descr,
+  .vaccines__subtitle {
+    padding-left: 10px;
+  }
+  .cows__title {
+    font-size: 37px;
+  }
+  .column {
+    flex-direction: column;
+  }
+  .information {
+    gap: 23px;
+  }
+  .milk-only {
+    height: 220px;
+  }
+  .jersey_title {
+    font-size: 25px;
+  }
+  .danish_title {
+    font-size: 25px;
+  }
+  .main-client__title,
+  .vaccines-client__title {
+    font-size: 23px;
+  }
+  .client-item,
+  .vaccines-client-item {
+    font-size: 19px;
+    line-height: 26px;
+  }
+  .client-box {
+    width: 320px;
+    padding: 10px 0;
+  }
+  .vaccines-client-box {
+    padding-right: 10px;
+  }
+  .horizontal_video {
+    height: 191px;
+  }
+  .cows__title {
+    margin-top: 50px;
+  }
+  .main-phone {
+    font-size: 13px;
+  }
+  .about-include {
+    margin-left: 0;
+  }
+  .about__descr {
+    margin: 0;
+  }
+  .breeds__button {
+    margin-left: 0;
+    margin-top: 22px;
+  }
+  .promo__title {
+    font-size: 28px;
+  }
+  .form-area {
+    margin: 0 auto;
+  }
+  .form-input {
+    margin-bottom: 0;
+  }
+  .button_submit {
+    margin-top: 13px;
+  }
+  .form-promo {
+    height: 118px;
+  }
+  .illness__card {
+    flex-direction: column;
+  }
+  .illness__img {
+    margin-bottom: 20px;
+  }
+  .illness__title {
+    padding: 0;
+  }
+  .positives__img img {
+    display: none;
+  }
+}
+@media (max-width: 359px) {
+  .meat__list-item,
+  .milk__list-item {
+    min-width: 290px;
+  }
+  .meat__list-col,
+  .milk__list-col {
+    left: 58%;
+  }
+  .meat-milk__title {
+    font-size: 21px;
+  }
+  .cowcard-img {
+    max-width: 330px;
+  }
+  .cowcard__content {
+    max-width: 329px;
+    width: 329px;
+  }
+  .form__title {
+    font-size: 30px;
+  }
+  .form-area {
+    display: block;
+  }
+  .form-promo {
+    width: 300px;
+    height: 118px;
+    margin-bottom: 20px;
+  }
+  .form-promo-icon {
+    display: none;
+  }
+  .form-input {
+    margin-left: 10px;
+    width: 300px;
+    height: 56px;
+  }
+  .form-input:first-child {
+    margin-top: 10px;
+  }
+  .button_submit {
+    margin-left: 10px;
+  }
+  .partners {
+    padding: 50px 0;
+  }
+  .partners__title {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  .first-main-partner img,
+  .second-main-partner img,
+  .third-main-partner img {
+    width: 97px;
+  }
+  .galery {
+    padding-top: 50px;
+  }
+  .cows__title {
+    font-size: 32px;
+    padding: 0 0 0 5px;
+  }
+  .main-cows__title {
+    padding-left: 50px;
+  }
+  .cows {
+    padding: 120px 0 0 0;
+  }
+  .cows__card {
+    margin: 0 0 70px 0;
+    width: 250px;
+  }
+  .cows__card img {
+    width: 250px;
+  }
+  .cows__button,
+  .cows__card-link,
+  .cards4cows {
+    width: 250px;
+  }
+  .vaccines {
+    padding: 60px 0;
+  }
+  .vaccines__img img {
+    width: 279px;
+    height: 168px;
+  }
+  .vaccines__descr {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .vaccines__title {
+    font-size: 24px;
+  }
+  .vaccines__subtitle {
+    font-size: 22px;
+  }
+  .vaccines__info {
+    width: 320px;
+  }
+  .vid_img-vertical {
+    width: 120px;
+    height: 230px;
+  }
+  .vid_img-horizontal {
+    width: 210px;
+    height: 120px;
+  }
+  .stub_prev {
+    width: 100px;
+    height: 100px;
+  }
+  .milk-only {
+    height: 220px;
+  }
+  .vaccines__descr {
+    width: 95%;
+  }
+  .vaccines__info {
+    width: 300px;
+  }
+  .information {
+    gap: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
