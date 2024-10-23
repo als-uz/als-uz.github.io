@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprachschule</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/03c3c4aea0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <script src="https://kit.fontawesome.com/d67b29e257.js" crossorigin="anonymous"></script>
+    <div class="scroll">
+        <div class="container header-container">
+            <header class="header">
+                <div class="logo">
+                    <a class="logo-box" href="#">SPRACHSCHULE</a>
+                </div>
+                <div class="nav-actions">
+                    <nav class="navbar">
+                        <ul class="navbar-nav">
+                            <li><a class="menu__item" href="#" data-lang="home">Bosh sahifa</a></li>
+                            <li><a class="menu__item" href="about.html" data-lang="about">Biz haqimizda</a></li>
+                            <li><a class="menu__item" href="#courses" data-lang="courses">Kurslarimiz</a></li>
+                            <li><a class="menu__item" href="#exams" data-lang="exams">Imtihonlar</a></li>
+                            <li><a class="menu__item" href="consulting.html" data-lang="consulting">Konsultatsiya</a>
+                            <li><a class="menu__item" href="#contact" data-lang="contact">Kontaktlar</a></li>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="actions">
+                        <div class="custom-select">
+                            <div class="selected-option">
+                                <img class="current-flag" src="img/flags/uzbekistan_flag.png" alt="Uzbek flag"
+                                    width="20">
+                                <span class="selected-language">Uz</span>
+                            </div>
+                            <ul class="language-options select-options">
+                                <li data-lang="uz">
+                                    <img src="img/flags/uzbekistan_flag.png" alt="Uzbek flag" width="20"> Uz
+                                </li>
+                                <li data-lang="de">
+                                    <img src="img/flags/german_flag.png" alt="German flag" width="20"> De
+                                </li>
+                            </ul>
+                        </div>
+                        <a data-key="register" onclick='window.location="form.html"' class="register-btn"
+                            data-lang="register">Ro'yhatdan o'tish</a>
+                        <div class="hamburger">
+                            <span class="hamburger_span"></span>
+                            <span class="hamburger_span"></span>
+                            <span class="hamburger_span"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+        </div>
+    </div>
+
+
+    <div class="space"></div>
+
+    <main>
+        <div class="container">
+            <section class="hero" id="hero">
+                <div class="hero-box">
+                    <div class="hero_leftside">
+                        <div class="hero_title" data-lang="info">BIZ NAFAQAT NEMIS TILINI O'RGATAMIZ, BALKI HAR BIR
+                            INSONNING YANGI
+                            IMKONIYATLAR UCHUN ESHIKLARINI OCHAMIZ!</div>
+                        <button onclick="window.location='form.html'" class="hero_register"
+                            data-lang="register">Ro'yhatdan o'tish</button>
+                    </div>
+                    <div class="hero-rightside">
+                        <!-- <img src="" alt=""> -->
+                        <div class="img-stub"><img src="img/other/main-photo.jpg" alt="main-photo" class="main-photo">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="container">
+            <section class="about-redirect">
+                <div class="about-redirect_box">
+                    <a href="about.html" class="about-redirect_title" data-lang="about">Biz haqimizda</a>
+                    <div class="about-redirect_iconbox"><img onclick="window.location='about.html'"
+                            class="about-redirect_icon" src="icons/next.png" alt="next"></div>
+                </div>
+            </section>
+        </div>
+
+        <section class="consult">
+            <div class="consult_side">
+                <div class="consult_info">
+                    <div class="consult_title" data-lang="consulting">Konsultatsiya</div>
+                    <div class="consult_descr">Bizning kompaniyamiz, nemis tilini o‘rganishga va Germaniyaga
+                        moslashishga yordam berish uchun jismoniy va yuridik shaxslar uchun professional maslahat
+                        xizmatlarini taklif etad</div>
+                </div>
+                <button onclick="window.location='consulting.html'" class="consult_btn"
+                    data-lang="takeconsult">Konsultatsiya olish</button>
+            </div>
+            <div class="test_side">
+                <div class="test_title" data-lang="test">Test</div>
+                <div class="test_descr" data-lang="testknowlenge">Bilim darajangizni sinab ko'ring <br><br></div>
+                <!-- <div class="about-redirect_iconbox"><img class="about-redirect_icon" src="icons/next.png"
+                        alt="next"></div> -->
+                <button class="test_btn" data-lang="try">Sinash</button>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="courses" id="courses">
+                <div class="courses_title" data-lang="courses">Kurslarimiz</div>
+                <div class="courses_wrap">
+
+                    <div class="first_course course-box">
+                        <div class="course_level">A1</div>
+                        <div class="background-text">A1</div>
+                        <div class="course_descr" data-lang="a1">Yangi boshlovchilar uchun. Har kuni muloqot uchun
+                            asosiy grammatika va
+                            oddiy iboralarni o‘rganing.</div>
+                        <button onclick="selectLevel('A1')" class="course_price" data-lang="a1price">600.000 so'm / oy</button>
+                    </div>
+
+                    <div class="second_course course-box">
+                        <div class="course_level">A2</div>
+                        <div class="background-text">A2</div>
+                        <div class="course_descr" data-lang="a2">Boshlang‘ich bilimlarga ega bolganlar uchun. Lug‘at
+                            boyligini
+                            kengaytirish va murakkab tuzilmalarni o‘rganish.</div>
+                        <button onclick="selectLevel('A2')" class="course_price" data-lang="a2price">800.000 so'm / oy</button>
+                    </div>
+
+                    <div class="third_course course-box">
+                        <div class="course_level">B1</div>
+                        <div class="background-text">B1</div>
+                        <div class="course_descr" data-lang="b1">Til asoslari bilan tanish talabalar uchun. O‘z
+                            fikrlarini ifoda
+                            etishni va kundalik vaziyatlarni muhokama qilishni o‘rganing.</div>
+                        <button onclick="selectLevel('B1')" class="course_price" data-lang="b1price">1.000.000 so'm / oy</button>
+                    </div>
+
+                    <div class="fourth_course course-box">
+                        <div class="course_level">B2</div>
+                        <div class="background-text">B2</div>
+                        <div class="course_descr" data-lang="b2">Ishonchli foydalanuvchilar uchun. Ijtimoiy va
+                            professional mavzularda
+                            muloqot qilish ko‘nikmalarini rivojlantirish.</div>
+                        <button onclick="selectLevel('B2')" class="course_price" data-lang="b2price">1.200.000 so'm / oy</button>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <div class="container">
+            <div class="exams" id="exams">
+                <div class="exams_title" data-lang="exams">Imtihonlar</div>
+                <div class="exams_box">
+                    <ul class="exmas_listbox">
+                        <li class="exams_list-item">
+                            <div class="month">Dekabr</div>
+                            <div class="exams_firstday">24.12.24</div>
+                            <div class="exams_secondday">25.12.24</div>
+                        </li>
+                        <li class="exams_list-item">
+                            <div class="month">Fevral</div>
+                            <div class="exams_firstday">24.02.25</div>
+                            <div class="exams_secondday">25.02.25</div>
+                        </li>
+                        <li class="exams_list-item">
+                            <div class="month">Aprel</div>
+                            <div class="exams_firstday">24.04.25</div>
+                            <div class="exams_secondday">25.04.25</div>
+                        </li>
+                        <li class="exams_list-item">
+                            <div class="month">Iyun</div>
+                            <div class="exams_firstday">24.06.25</div>
+                            <div class="exams_secondday">25.06.25</div>
+                        </li>
+                        <li class="exams_list-item">
+                            <div class="month">Avgust</div>
+                            <div class="exams_firstday">24.08.25</div>
+                            <div class="exams_secondday">25.08.25</div>
+                        </li>
+                        <li class="exams_list-item">
+                            <div class="month">Oktyabr</div>
+                            <div class="exams_firstday">24.10.25</div>
+                            <div class="exams_secondday">25.10.25</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <section class="contact" id="contact">
+                <div class="contact-b">
+                    <div class="contact_side">
+                        <div class="contact_info">
+                            <h3 data-lang="contactinfo">Kontakt ma'lumot</h3>
+                            <p><i class="fas fa-phone"></i> <span data-lang="phone">Telefon:</span> +998 (97) 155 29 04
+                            </p>
+                            <p><i class="fas fa-envelope"></i> <span data-lang="email">Email:</span>
+                                g.halilov@sprachschule.uz</p>
+                            <p><span data-lang="address">Address:</span> Tashkent M.Rashinov 150</p>
+                            <div class="social-media">
+                                <a href="#"><i class="fa-brands fa-telegram-plane social-media-i"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram social-media-i"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address_slider">
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae5855d3720b547bca44046e2af5e5e93c929029256f3919fee1337fd01085347&amp;source=constructor"
+                            class="map">
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3 class="footer-heading" data-lang="contactinfo">Kontakt ma'lumot</h3>
+                    <p class="footer-info-small"><span data-lang="phone">Telefon:</span> +998 97 155 29 01</p>
+                    <p class="footer-info-small"><span data-lang="email">Email:</span> info@sprachschule.uz</p>
+                    <p class="footer-info-small"><span data-lang="address">Address:</span> Tashkent M.Rashinov 150</p>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading" data-lang="main">Asosiy</h3>
+                    <a href="index.html" class="footer-link" data-lang="home">Bosh menu</a>
+                    <a href="#courses" class="footer-link" data-lang="courses">Kurslar</a>
+                    <a href="consultation.html" class="footer-link" data-lang="consulting">Konsultatsiya</a>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading" data-lang="socials">Ijtimoiy tarmoqlarimiz</h3>
+                    <a href="https://t.me/Sprachschule" class="footer-social"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://instagram.com/Sprachschule" class="footer-social"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading" data-lang="about">Biz haqimizda</h3>
+                    <p class="footer-info-small">
+                        Bizning nemiz tiliga ixtisoslashgan o’quv
+                        markazimiz 2013 yildan boshlab faoliyat yuritib kelmoqda va siz u bizning markazimizda nafaqat
+                        nemis tilini o’rganish balki bu orqali qanday imkoniyatlarga ega bo’lishingiz xaqida ham
+                        ma’lumotga ega bo’lasiz.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-lang="rights">© Sprachschule. Hamma huquqlar himoyalangan.</p>
+            </div>
+        </footer>
+
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

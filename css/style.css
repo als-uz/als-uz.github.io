@@ -1,0 +1,1717 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #fff 60%, #9ecce7);
+
+}
+
+#mySection {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    margin-top: 20px;
+}
+
+#mySection.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* burger */
+.hamburger {
+    display: none;
+    align-items: center;
+    width: 40px;
+    height: 12px;
+    margin-left: 10px;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #093C76;
+
+    border-radius: 2px;
+    margin-bottom: 5px;
+    transition: 0.5s all;
+}
+
+.hamburger_active span {
+    margin-bottom: -3px;
+}
+
+.hamburger_active span:nth-child(1) {
+    transform: translateY(3px) rotate(-45deg);
+}
+
+.hamburger_active span:nth-child(2) {
+    display: none;
+}
+
+.hamburger_active span:nth-child(3) {
+    transform: translateY(2px) rotate(45deg);
+}
+
+.language-options li {
+    z-index: 1000;
+}
+
+/* background-text */
+.background-text {
+    color: transparent;
+    font-weight: bold;
+    font-size: 250px;
+    background: linear-gradient(90deg, #0d3c78, #60aaf3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    position: absolute;
+    z-index: -1;
+    top: 20%;
+    opacity: 0.4;
+    right: 9%;
+}
+
+/* container */
+.container {
+    max-width: 1520px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.scroll {
+    position: fixed;
+    width: 100vw;
+    margin-bottom: 50px;
+    z-index: 1000;
+}
+
+.space {
+    padding-top: 50px;
+}
+
+/* header */
+header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo-box {
+    font-weight: 900;
+    font-size: 32px;
+    color: #093C76;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-actions {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li a {
+    color: #093C76;
+    font-weight: bold;
+    padding: 5px 4px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+nav ul li:first-child {
+    display: none;
+}
+
+nav ul li a:hover {
+    border-top: 2px solid #093C76;
+    border-bottom: 2px solid #093C76;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Custom select */
+.custom-select {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.selected-option {
+    padding: 8px 12px;
+    border: 2px solid #093C76;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.selected-option img {
+    margin-right: 10px;
+}
+
+.selected-option span,
+.custom-select li {
+    font-weight: 700;
+    user-select: none;
+    color: #093C76;
+}
+
+.select-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.select-options li {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.select-options li img {
+    margin-right: 10px;
+}
+
+.select-options li:hover {
+    background-color: #e0e0e0;
+}
+
+.custom-select.active .select-options {
+    display: block;
+}
+
+.register-btn {
+    background-color: #093C76;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #093C76;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: white;
+    color: #093C76;
+    border: 2px solid #093C76;
+}
+
+.select-options.open {
+    display: block;
+}
+
+
+/* main */
+
+/* hero section */
+
+.hero {
+    padding: 40px 0 0 0;
+}
+
+.hero-box {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(115deg, #093C76 50%, #1b8d9f);
+    padding: 70px 40px;
+    border-radius: 10px;
+}
+
+.hero_title {
+    max-width: 730px;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 50px;
+    color: #fff;
+}
+
+.hero_register {
+    margin-top: 20px;
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    color: #093C76;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #093C76;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.hero_register:hover {
+    border: 2px solid #28ACBF;
+}
+
+.img-stub {
+    width: 400px;
+    height: 270px;
+    background-color: #ccc;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.img-stub span {
+    position: absolute;
+    top: 37%;
+    right: 26%;
+}
+
+
+
+/* courses */
+
+.courses {
+    padding: 70px 0 0 0;
+}
+
+.courses_title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #093C76;
+    margin-bottom: 30px;
+}
+
+.courses_wrap {
+    display: flex;
+    justify-content: space-around;
+}
+
+.course-box {
+    position: relative;
+    width: 300px;
+    height: 100%;
+    min-height: 350px;
+    border: 3px solid #093C76;
+    border-radius: 10px;
+    padding: 20px 30px;
+    transition: 0.3s ease;
+}
+
+.course-box:hover {
+    transform: scale(1.05);
+}
+
+.course_level {
+    font-size: 36px;
+    font-weight: 800;
+    color: #093C76;
+}
+
+.course_level span {
+    font-size: 24px;
+}
+
+.course_descr {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #093C76;
+    min-height: 150px;
+    z-index: 10;
+    line-height: 20px;
+}
+
+.course_price {
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 75px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #093C76;
+    color: #093C76;
+    font-weight: 700;
+    transition: 0.3s ease;
+    background-color: #fff;
+    z-index: 100;
+}
+
+.course_price:hover {
+    background-color: #093C76;
+    color: #fff;
+}
+
+
+/* redirect */
+
+.about-redirect_box {
+    display: flex;
+    justify-content: end;
+}
+
+.about-redirect_title {
+    font-size: 24px;
+    margin-right: 20px;
+    color: #093C76;
+}
+
+.about-redirect_icon {
+    align-items: center;
+    width: 30px;
+    transition: 0.3s ease;
+}
+
+.about-redirect_icon:hover {
+    transform: scale(1.05);
+}
+
+/* exams */
+
+.exams {
+    padding: 60px 0 0 0;
+}
+
+.exams_box {
+    width: 60%;
+    height: auto;
+    padding: 20px;
+    background: linear-gradient(115deg, #093C76 50%, #1b8d9f);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.exmas_listbox {
+    list-style-type: none;
+}
+
+.month {
+    font-size: 32px;
+}
+
+.exams_title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #093C76;
+    margin-right: 30px;
+}
+
+.exams_list-item {
+    position: relative;
+    padding: 10px 15px 10px 15px;
+    border: 1px solid #fff;
+    display: flex;
+}
+
+.exams_firstday,
+.exams_secondday {
+    position: absolute;
+    font-size: 24px;
+    left: 33%;
+}
+
+.exams_secondday {
+    left: 66%;
+}
+
+
+/* consult */
+
+.consult {
+    padding: 50px 0 0 0;
+    display: flex;
+}
+
+.consult_side {
+    padding: 20px;
+    width: 55%;
+    height: auto;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: linear-gradient(115deg, #093C76 50%, #1b8d9f);
+    text-align: end;
+}
+
+.consult_title {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.consult_descr {
+    width: 70%;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    justify-content: end;
+    text-align: end;
+    margin-left: 30%;
+}
+
+.consult_btn {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+    color: #093C76;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.consult_btn:hover {
+    transform: scale(1.05);
+}
+
+/* test */
+
+.test_side {
+    padding: 20px;
+    width: 44%;
+    height: auto;
+    margin-left: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: linear-gradient(35deg, #1b8d9f 20%, #093C76 80%);
+}
+
+.test_title {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.test_descr {
+    color: #fff;
+    font-size: 18px;
+    height: 48px;
+}
+
+.test_btn {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+    color: #093C76;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.test_btn:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* contact */
+.contact {
+    padding: 70px 0 0 0;
+}
+
+.contact-b {
+    display: flex;
+    gap: 30px;
+}
+
+.contact_side {
+    max-width: 48%;
+    background: linear-gradient(115deg, #093C76 50%, #1b8d9f);
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact_info {
+    flex: 1 1 100px;
+    background: #f4f4f4;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.contact_info:hover {
+    transform: scale(1.01);
+}
+
+.contact_info h3 {
+    margin-bottom: 20px;
+    font-size: 42px;
+    color: #093C76;
+    font-weight: 700;
+}
+
+.contact_info p {
+    font-size: 20px;
+    color: #093C76;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media-i {
+    color: #093C76;
+}
+
+.social-media a {
+    color: #093C76;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-media-i:hover {
+    opacity: .9;
+}
+
+
+/* map */
+
+.map {
+    width: 53vw;
+    border-radius: 10px;
+    height: 100%;
+    border: none;
+}
+
+
+
+/* footer */
+
+.footer {
+    background-color: #093C76;
+    padding: 50px;
+    margin-top: 60px;
+    padding: 60px 20px;
+}
+
+.footer-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-column {
+    flex-basis: 22%;
+}
+
+.footer-column a {
+    font-size: 18px;
+    line-height: 16px;
+}
+
+.footer-heading {
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.footer-info-small {
+    font-size: 18px;
+    line-height: 17px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+
+.footer-link {
+    display: block;
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #aaa;
+}
+
+
+.footer-social {
+    font-size: 32px;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+    color: #fff;
+}
+
+
+
+.footer-bottom {
+    margin-top: 40px;
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+
+
+
+/* form */
+.feedback {
+    margin-top: 100px;
+    padding: 50px;
+    border-radius: 5px;
+    background-color: #093C76;
+}
+
+.feedback_title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.feedback-split {
+    display: flex;
+    gap: 20px;
+}
+
+.contact_info-form {
+    height: 365px;
+    box-shadow: none;
+}
+
+.mostinput {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#course-select,
+#name,
+#lastname,
+#age,
+#phone,
+#message {
+    width: 100%;
+    padding: 10px 20px;
+    color: #093C76;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    height: 52px;
+}
+
+#name {
+    width: 40%;
+}
+
+#lastname {
+    width: 37.3%;
+    color: #093C76;
+}
+
+#age {
+    max-width: 13%;
+    margin: 0;
+    height: 55px;
+}
+
+#phone {
+    max-width: 40%;
+}
+
+#message {
+    height: 150px;
+    min-height: 150px;
+    min-width: 100%;
+    max-width: 700px;
+}
+
+.form button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #093C76;
+    color: #093C76;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+
+.form button:active {
+    background-color: #093C76;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.form button:hover {
+    transform: scale(1.01);
+}
+
+input {
+    border: none;
+}
+
+
+
+/* about */
+
+.congrats {
+    height: 90vh;
+    margin: auto 0;
+    padding-top: 20%;
+}
+
+.congrats-flexbox {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.congrats_title {
+    font-size: 64px;
+    font-weight: 700;
+    color: #093C76;
+    vertical-align: center;
+}
+
+.congrats_btn {
+    border: 2px solid #093C76;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #093C76;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    transition: 0.3s ease
+}
+
+.congrats_btn:hover {
+    background-color: #fff;
+    color: #093C76;
+}
+
+/* aboutus */
+
+.aboutus {
+    padding: 50px;
+    background-color: #093C76;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.img-stub1 {
+    border-radius: 5px;
+}
+
+.aboutus_title {
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.aboutus_descr {
+    max-width: 800px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+/* about center */
+
+.aboutcenter_title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #093C76;
+}
+
+.aboutcenter_descr {
+    font-size: 20px;
+    font-weight: 400;
+    color: #093C76;
+}
+
+.aboutcenter_descr2 {
+    max-width: 50%;
+    font-size: 20px;
+    font-weight: 400;
+    color: #093C76;
+    margin-top: 20px;
+}
+
+.aboutcenter_photos {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.aboutcenter_photo {
+    width: 48%;
+    height: 300px;
+    transition: 0.3s ease;
+
+}
+
+.aboutcenter_photo:hover {
+    transform: scale(1.01);
+}
+
+
+
+/* consult */
+
+.consulting {
+    padding: 50px 0;
+    margin: 0;
+}
+
+.consulting_title {
+    color: #093C76;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.consulting_descr {
+    max-width: 70%;
+    font-size: 28px;
+    font-weight: 300;
+    color: #093C76;
+}
+
+/* servises */
+
+.servises {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.first-servise, .second-servise {
+    padding: 20px;
+    background-color: #093C76;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.first-servise_title, .second-servise_title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.first-servise_descr, .second-servise_descr {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.servises_list {
+    font-size: 20px;
+    margin-left: 20px;
+    max-width: 90%;
+}
+.servises_item {
+    margin-bottom: 10px;
+    color: #f7f4f4;
+    font-weight: 200;
+    line-height: 22px;
+}
+hr {
+    margin-bottom: 20px;
+    background-color: #fff;
+    height: 3px;
+}
+.servises_end {
+    font-size: 28px;
+    color: #093C76;
+    max-width: 60%;
+    font-weight: 300;
+}
+
+.consult-add {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.servises_btn {
+    padding: 15px;
+    background-color: #093C76;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 24px;
+    margin-top: 20px;
+}
+@media (min-width: 1400px) {
+
+    .footer-column {
+        flex-basis: 20%;
+    }
+
+    .footer-heading {
+        font-size: 26px;
+    }
+
+    .footer-info-small {
+        font-size: 14px;
+    }
+
+    .footer-link {
+        font-size: 16px;
+    }
+
+    .footer-social {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 1399px) {
+    .course-box {
+        width: 270px;
+        min-height: 393px;
+    }
+
+    .course_descr {
+        font-size: 19px;
+    }
+
+    .footer-heading {
+        line-height: 31px;
+    }
+
+    .background-text {
+        font-size: 215px;
+        top: 26%;
+    }
+
+    .contact_info-form {
+        width: 100%;
+    }
+
+    .contact_info-form h3 {
+        line-height: 36px;
+        font-size: 36px;
+    }
+
+    .contact_info-form p {
+        font-size: 14px;
+    }
+
+    .aboutus {
+        gap: 30px;
+    }
+
+    .aboutcenter_photo {
+        width: 40%;
+    }
+
+}
+
+
+@media (max-width: 1199px) {
+
+    .hero_title {
+        font-size: 38px;
+        line-height: 45px;
+    }
+
+    .img-stub {
+        width: 350px;
+        height: 250px;
+    }
+
+    .consult_descr {
+        font-size: 17px;
+    }
+
+    .consult_side {
+        width: 80%;
+    }
+
+    .courses_title {
+        font-size: 40px;
+    }
+
+    .course-box {
+        width: 215px;
+        min-height: 250px;
+        max-height: 300px;
+    }
+
+    .course_descr {
+        font-size: 15px;
+    }
+
+    .course_price {
+        margin-top: 0;
+    }
+
+    .background-text {
+        font-size: 170px;
+        top: 40%;
+    }
+
+    .exams_box {
+        padding: 15px;
+    }
+
+    .month {
+        font-size: 26px;
+    }
+
+    .exams_firstday,
+    .exams_secondday {
+        font-size: 20px;
+    }
+
+    .exams_list-item {
+        padding: 10px 5px 10px 10px;
+    }
+
+    .contact_info h3 {
+        font-size: 38px;
+    }
+
+    .contact_info p {
+        font-size: 18px;
+    }
+
+    .footer-container {
+        padding: 0 40px;
+    }
+
+    .footer-column {
+        flex-basis: 22%;
+    }
+
+    .footer-heading {
+        font-size: 24px;
+    }
+
+    .footer-info-small {
+        font-size: 15px;
+    }
+
+    .footer-link {
+        font-size: 15px;
+    }
+
+    .footer-social {
+        font-size: 22px;
+    }
+
+    #name,
+    #lastname {
+        margin-right: 16px;
+    }
+
+    .contact_info-form {
+        width: 150%;
+    }
+
+    .right-split {
+        max-width: 70%;
+    }
+
+    .contact_info-form h3 {
+        font-size: 34px;
+    }
+
+    .contact_info-form p {
+        font-size: 13px;
+    }
+
+    .aboutcenter_photos {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .hero-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .hero_title {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .img-stub {
+        border-radius: 5px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .consult_side,
+    .test_side {
+        width: 90%;
+    }
+
+    .test_side {
+        margin-left: 77px;
+        margin-top: 20px;
+    }
+
+    .courses_wrap {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .course-box {
+        width: 34%;
+    }
+
+    .consult,
+    .test {
+        flex-direction: column;
+    }
+
+    .map {
+        width: 48vw;
+    }
+
+    .contact_info h3 {
+        font-size: 30px;
+    }
+
+    .contact_info p {
+        font-size: 14px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        padding: 0 30px;
+    }
+
+    .footer-column {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .footer-heading {
+        font-size: 28px;
+    }
+
+    .footer-info-small {
+        font-size: 14px;
+    }
+
+    .footer-link {
+        font-size: 14px;
+    }
+
+    .footer-social {
+        font-size: 20px;
+    }
+
+    .footer-bottom {
+        font-size: 13px;
+    }
+
+    .contact_info-form {
+        display: none;
+    }
+
+    .feedback-split {
+        display: block;
+    }
+
+    .right-split {
+        max-width: 100%;
+    }
+
+    .emoji img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .congrats_title {
+        font-size: 52px;
+    }
+
+    .img-stub1 {
+        margin-top: 0;
+        width: 233px;
+        height: 194px;
+    }
+
+    .aboutus_title {
+        font-size: 28px;
+    }
+
+    .aboutus_descr {
+        font-size: 15px;
+    }
+
+    .aboutcenter_title {
+        font-size: 28px;
+    }
+
+    .aboutcenter_descr,
+    .aboutcenter_descr2 {
+        font-size: 15px;
+    }
+
+}
+
+
+
+@media (max-width: 767px) {
+    .hero-box {
+        padding: 50px 20px;
+    }
+
+    .courses_wrap {
+        align-items: center;
+    }
+
+    .courses_title {
+        font-size: 36px;
+    }
+
+    .exams_title {
+        font-size: 36px;
+    }
+
+    .month {
+        font-size: 22px;
+    }
+
+    .exams_firstday,
+    .exams_secondday {
+        font-size: 17px;
+    }
+
+    .contact_side,
+    .contact_info {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .test_side {
+        margin-left: 58px;
+    }
+
+    .course-box {
+        width: 43%;
+    }
+
+    .contact_side {
+        max-width: 100%;
+    }
+
+    .contact_info {
+        margin-bottom: 0;
+    }
+
+    .contact-b {
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .contact_info h3 {
+        font-size: 36px;
+    }
+
+    .contact_info p {
+        font-size: 17px;
+    }
+
+    .map {
+        width: 100%;
+        height: 300px;
+    }
+
+    #name,
+    #lastname {
+        margin-right: 0;
+    }
+
+    .mostinput {
+        justify-content: start;
+        gap: 9px;
+    }
+
+    #age {
+        max-width: 18%;
+        height: 51px;
+    }
+
+    .emoji img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .congrats_title {
+        font-size: 34px;
+    }
+
+    .congrats_btn {
+        padding: 7px;
+        font-size: 17px;
+    }
+
+    .congrats {
+        padding-top: 40%;
+    }
+
+    .aboutus {
+        flex-direction: column;
+    }
+
+    .img-stub1 {
+        margin: 0;
+        width: 100%;
+    }
+    .register-btn {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .navbar-nav {
+        position: fixed;
+        flex-direction: column;
+        top: -50px;
+        left: -100%;
+        width: 100%;
+        margin-top: 150px;
+        height: calc(100vh - 50px);
+        padding: 20px 10px;
+        background-color: #093C76;
+        transition: 0.3s ease-out;
+        z-index: 3;
+
+    }
+    .menu__item {
+        display: block;
+        width: 100%;
+        color: #fff;
+        font-size: 32px;
+        font-weight: 500;
+        border: 1px solid #fff;
+        text-align: center;
+        border-radius: 5px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .menu_active {
+        left: 0;
+        
+    }
+
+
+
+
+}
+
+
+@media (max-width: 575px) {
+    .logo-box {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    nav ul li {
+        font-size: 14px;
+    }
+
+    .hero_title {
+        font-size: 23px;
+        line-height: 28px;
+    }
+
+    .register-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .course-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .consult,
+    .test {
+        flex-direction: column;
+    }
+
+    .consult_side,
+    .test_side {
+        width: 98%;
+        padding: 20px;
+    }
+
+    .consult_descr {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .test_side {
+        margin-left: 7px;
+    }
+
+    .exams_box {
+        width: 100%;
+    }
+
+    .contact_info h3 {
+        font-size: 28px;
+    }
+
+    .contact_info p {
+        font-size: 14px;
+    }
+
+    .contact-b {
+        flex-direction: column;
+    }
+
+    .img-stub {
+        width: 250px;
+        height: 250px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .footer-column {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .footer-heading {
+        font-size: 28px;
+    }
+
+    .footer-info-small {
+        font-size: 14px;
+    }
+
+    .footer-link {
+        font-size: 12px;
+    }
+
+    .footer-social {
+        font-size: 16px;
+    }
+
+    .footer-bottom {
+        font-size: 11px;
+    }
+
+    .mostinput {
+        gap: 0;
+        flex-direction: column;
+    }
+
+    #age {
+        margin-bottom: 20px;
+    }
+
+    .feedback {
+        padding: 20px;
+    }
+
+    #name,
+    #lastname,
+    #age,
+    #phone {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    #age {
+        max-width: 40%;
+    }
+
+    .feedback_title {
+        font-size: 26px;
+    }
+
+    #mySection {
+        gap: 10px;
+    }
+
+    .emoji img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .congrats_title {
+        font-size: 24px;
+    }
+
+    .congrats_btn {
+        font-size: 13px;
+    }
+
+    .congrats {
+        padding-top: 60%;
+    }
+
+    .img-stub1 {
+        width: 100%;
+    }
+
+    .aboutus {
+        padding: 25px;
+    }
+
+    .aboutcenter_descr2 {
+        max-width: 70%;
+    }
+}
+
+
+@media (max-width: 359px) {
+    .logo-box {
+        font-size: 24px;
+    }
+    .hero_title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .register-btn {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .consult_side,
+    .test_side {
+        padding: 10px;
+    }
+
+    .test_side {
+        margin-left: 6px;
+    }
+
+    .course-box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container {
+        padding: 15px 5px;
+    }
+}
+
+
+.test_title, .test_descr, .test_btn {
+    background-color: #245392;
+    display: none;
+}
+
+.register-btn {
+    background-color: #f8dc0e;
+    border: 2px solid #d0be35;
+    color: #093C76;
+}
+.register-btn:hover {
+    border: 2px solid #d0be35;
+}
+
+.consult_btn {
+    color: #093C76;
+    background-color: #f8dc0e;
+}
+
+
+.hero_register {
+    background-color: #f8dc0e;
+}
+.hero_register:hover {
+    border: 2px solid #d0be35;
+}
+
+.course_price:hover {
+    background-color: #f8dc0e;
+    color: #093C76;
+}
+
+.congrats_btn {
+    background-color: #f8dc0e;
+    border: 2px solid #f8dc0e;
+    color: #093C76;
+}
+
+.congrats_btn:hover {
+    color: #ffe100;
+}
+
+.main-photo {
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.about-photo {
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #ffe100;
+}
